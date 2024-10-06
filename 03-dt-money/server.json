@@ -39,6 +39,22 @@
       "type": "income",
       "category": "Venda",
       "createdAt": "2024-03-10"
+    },
+    {
+      "id": "f273",
+      "title": "Pedagio",
+      "amount": 20,
+      "type": "outcome",
+      "category": "Transporte",
+      "createdAt": "2024-10-04T03:19:19.847Z"
+    },
+    {
+      "id": "ab21",
+      "title": "Truco",
+      "amount": 10,
+      "type": "outcome",
+      "category": "Jogo",
+      "createdAt": "2024-10-04T05:19:54.526Z"
     }
   ]
 }

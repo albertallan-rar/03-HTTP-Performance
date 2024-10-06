@@ -1,6 +1,6 @@
-import logo from "../../assets/logo.svg";
-import { NewTransactionModal } from "../NewTransactionModal";
-import { HeaderContainer, HeaderContent } from "./styles";
+import logo from '../../assets/logo.svg'
+import { NewTransactionModal } from '../NewTransactionModal'
+import { HeaderContainer, HeaderContent } from './styles'
 
 export function Header() {
   return (
@@ -10,5 +10,5 @@ export function Header() {
         <NewTransactionModal />
       </HeaderContent>
     </HeaderContainer>
-  );
+  )
 }

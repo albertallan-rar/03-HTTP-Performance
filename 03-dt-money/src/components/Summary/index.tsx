@@ -1,31 +1,12 @@
-import { CircleArrowDown, CircleArrowUp, DollarSign } from "lucide-react";
-import { useContext } from "react";
-import { TransactionsContext } from "../../contexts/TransactionsContext";
-import { priceFormatter } from "../../utils/formatter";
-import { SummaryCard, SummaryContainer } from "./styles";
+import { CircleArrowDown, CircleArrowUp, DollarSign } from 'lucide-react'
+import { useSummary } from '../../hooks/useSummary'
+import { priceFormatter } from '../../utils/formatter'
+import { SummaryCard, SummaryContainer } from './styles'
 
 // Componente Summary que exibe um resumo das transações financeiras
 export function Summary() {
-  // Obtém as transações do contexto TransactionsContext
-  const { transactions } = useContext(TransactionsContext);
+  const summary = useSummary()
 
-  const summary = transactions.reduce(
-    (acc, transaction) => {
-      if (transaction.type === "income") {
-        acc.income += transaction.amount;
-        acc.total += transaction.amount;
-      } else {
-        acc.outcome += transaction.amount;
-        acc.total -= transaction.amount;
-      }
-      return acc;
-    },
-    {
-      income: 0,
-      outcome: 0,
-      total: 0,
-    },
-  );
   return (
     <SummaryContainer>
       {/* Card de Entradas */}
@@ -61,5 +42,5 @@ export function Summary() {
         </strong>
       </SummaryCard>
     </SummaryContainer>
-  );
+  )
 }
